@@ -1,9 +1,8 @@
 {
-  "name": "taio",
-  "version": "0.3.0",
-  "description": "Typescript All In One",
-  "main": "./build/index.js",
-  "types": "./build/index.d.ts",
+  "name": "go-cqhttp-qq-bot",
+  "version": "0.1.0",
+  "description": "QQ bot based on go-cqhttp",
+  "main": "./build/bot.js",
   "files": [
     "src",
     "build",
@@ -22,20 +21,19 @@
     "url": "https://github.com/DarrenDanielDay/taio"
   },
   "scripts": {
-    "build": "tsc --project ./tsconfig.production.json && tsc --project ./tsconfig.prod.json",
+    "build": "esbuild src/index.ts --tsconfig=tsconfig.production.json --platform=node --bundle --outfile=build/bot.js --sourcemap",
     "clean": "ts-node --files ./scripts/clean.ts",
-    "compile": "tsc",
-    "dev": "yarn watch",
+    "start": "yarn build && node build/bot.js",
     "format": "prettier --write .",
     "gene:index": "ts-node --files ./scripts/generate-index.ts",
     "lint": "yarn lint:style && yarn lint:types",
     "lint:style": "prettier --check .",
     "lint:types": "tsc --noEmit",
+    "prepare": "husky install",
     "reset": "yarn && yarn clean --git && yarn",
     "test": "jest",
     "update": "ts-node --files ./scripts/update-packages.ts",
-    "watch": "tsc -w",
-    "prepare": "husky install"
+    "watch": "tsc -w --noEmit"
   },
   "devDependencies": {
     "@types/glob": "^7.1.3",
