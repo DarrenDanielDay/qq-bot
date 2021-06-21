@@ -1304,6 +1304,11 @@ error-ex@^1.3.1:
   dependencies:
     is-arrayish "^0.2.1"
 
+esbuild@^0.12.9:
+  version "0.12.9"
+  resolved "https://registry.npmjs.org/esbuild/-/esbuild-0.12.9.tgz#bed4e7087c286cd81d975631f77d47feb1660070"
+  integrity sha512-MWRhAbMOJ9RJygCrt778rz/qNYgA4ZVj6aXnNPxFjs7PmIpb0fuB9Gmg5uWrr6n++XKwwm/RmSz6RR5JL2Ocsw==
+
 escalade@^3.1.1:
   version "3.1.1"
   resolved "https://registry.nlark.com/escalade/download/escalade-3.1.1.tgz#d8cfdc7000965c5a0174b4a82eaa5c0552742e40"
@@ -1608,6 +1613,13 @@ globals@^11.1.0:
   version "11.12.0"
   resolved "https://registry.npm.taobao.org/globals/download/globals-11.12.0.tgz?cache=0&sync_timestamp=1617957623227&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fglobals%2Fdownload%2Fglobals-11.12.0.tgz#ab8795338868a0babd8525758018c2a7eb95c42e"
   integrity sha1-q4eVM4hooLq9hSV1gBjCp+uVxC4=
+
+go-cqwebsocket@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.npmjs.org/go-cqwebsocket/-/go-cqwebsocket-6.0.1.tgz#ceb97d584f51538a2a8adab5b69aa9c16bc3e0d3"
+  integrity sha512-CEesm/7PYhDyrD+FW7srGsME/FgLdCi1qjZCrhOcDMuIl50iesdVL5NTa85/TKwRRNiSeD91Mz8NF1Te/vuPwA==
+  dependencies:
+    ws "^7.4.4"
 
 graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.4:
   version "4.2.6"
@@ -3499,6 +3511,11 @@ symbol-tree@^3.2.4:
   version "3.2.4"
   resolved "https://registry.npm.taobao.org/symbol-tree/download/symbol-tree-3.2.4.tgz#430637d248ba77e078883951fb9aa0eed7c63fa2"
   integrity sha1-QwY30ki6d+B4iDlR+5qg7tfGP6I=
+
+taio@^0.4.0-rc:
+  version "0.4.0-rc"
+  resolved "https://registry.npmjs.org/taio/-/taio-0.4.0-rc.tgz#50cbb7d129a3b3d4199a41a951d5935b3c52469a"
+  integrity sha512-kDeu0fQoVcgw2pCgzhhPJNTtofNmYz0JvRiPvflIuac/nLlOP5j454U5YDfhAXtM+PPdOIPx2Lf7LSHWbxGdPw==
 
 terminal-link@^2.0.0:
   version "2.1.1"
