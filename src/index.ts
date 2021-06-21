@@ -4,6 +4,9 @@ import * as path from "path";
 import * as util from "util";
 import * as fs from "fs";
 import { createInterface } from "readline";
+import { groupCommandHandler } from "./commands/handler";
+import type { Command } from "./commands/schema";
+import { echo, echoSwitch } from "./commands";
 
 const read = util.promisify(fs.readFile);
 const write = util.promisify(fs.writeFile);
@@ -74,13 +77,12 @@ async function startBot() {
   bot.connect();
   registerBotHandlers(bot);
 }
-
+const commands: Command[] = [echo, echoSwitch];
 async function registerBotHandlers(bot: cq.CQWebSocket) {
-  bot.on("message.group", ({ context: { group_id, message } }) => {
-    console.log(group_id, message);
-  });
-  bot.on("message.private", ({ context: { message, user_id } }) => {
-    console.log(user_id, message);
+  bot.on("message.group", ({ context: { group_id, message }, bot }) => {
+    if (typeof message === "string") {
+      groupCommandHandler(message, commands, bot, group_id);
+    }
   });
   bot.on("socket.close", () => {
     console.log("socket连接关闭");
