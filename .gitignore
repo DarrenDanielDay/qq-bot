@@ -5,6 +5,7 @@ build
 es-module
 bin/**
 !bin/go-cqhttp.exe
+!bin/config-template.yml
 ## TypeDoc generated
 *-docs
 
