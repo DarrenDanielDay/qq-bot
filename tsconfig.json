@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noStrictGenericChecks": false,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "outDir": "dev-build",
+    "sourceMap": true,
+    "downlevelIteration": true,
+    "keyofStringsOnly": false,
+    "declaration": true,
+    "module": "CommonJS",
+    "target": "ESNext",
+    "jsx": "react",
+    "lib": ["DOM", "ES2019", "ES2020.BigInt"]
+  },
+  "include": ["src", "scripts", "tests"],
+  "exclude": ["**/playground.*"],
+  "ts-node": {
+    "logError": true,
+    "files": true
+  }
+}

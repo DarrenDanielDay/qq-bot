@@ -1,0 +1,53 @@
+{
+  "name": "taio",
+  "version": "0.3.0",
+  "description": "Typescript All In One",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": [
+    "src",
+    "build",
+    "es-module",
+    "tsconfig.json",
+    "tsconfig.production.json",
+    ".prettierignore"
+  ],
+  "license": "MIT",
+  "author": {
+    "email": "Darren_Daniel_Day@hotmail.com",
+    "name": "Darren Daniel Day",
+    "url": "https://github.com/DarrenDanielDay"
+  },
+  "repository": {
+    "url": "https://github.com/DarrenDanielDay/taio"
+  },
+  "scripts": {
+    "build": "tsc --project ./tsconfig.production.json && tsc --project ./tsconfig.prod.json",
+    "clean": "ts-node --files ./scripts/clean.ts",
+    "compile": "tsc",
+    "dev": "yarn watch",
+    "format": "prettier --write .",
+    "gene:index": "ts-node --files ./scripts/generate-index.ts",
+    "lint": "yarn lint:style && yarn lint:types",
+    "lint:style": "prettier --check .",
+    "lint:types": "tsc --noEmit",
+    "reset": "yarn && yarn clean --git && yarn",
+    "test": "jest",
+    "update": "ts-node --files ./scripts/update-packages.ts",
+    "watch": "tsc -w",
+    "prepare": "husky install && yarn build"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.3",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.0.1",
+    "husky": "^6.0.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0",
+    "ts-jest": "^26.5.5",
+    "ts-node": "^9.1.1",
+    "typedoc": "^0.20.36",
+    "typescript": "^4.2.4"
+  }
+}

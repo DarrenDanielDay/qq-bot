@@ -1,0 +1,10 @@
+.vscode
+.husky
+coverage
+dev-build
+node_modules
+scripts
+tests
+jest.config.ts
+tsconfig.production.json
+*.log
