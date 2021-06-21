@@ -3,6 +3,8 @@ playground.*
 dev-build
 build
 es-module
+bin/**
+!bin/go-cqhttp.exe
 ## TypeDoc generated
 *-docs
 
